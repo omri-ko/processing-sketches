@@ -1,3 +1,5 @@
+pause = False
+
 def setup():
   size(1000,1000)
   background(255)
@@ -6,6 +8,13 @@ def setup():
   
 def draw():
     draw_random_triangle()
+    
+    
+def mouseClicked():
+    global pause
+    pause = not pause
+    noLoop() if pause else loop()
+    
     
 def draw_random_triangle():
     # set random color fill. for black and white use: fill(random(255))
