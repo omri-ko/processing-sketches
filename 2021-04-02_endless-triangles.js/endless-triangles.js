@@ -16,7 +16,7 @@ function draw(){
 function mouseClicked(){
   is_paused = !is_paused;
 
-  if (pause){
+  if (is_paused){
     noLoop();
   } else{
     loop();
